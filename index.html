@@ -8,27 +8,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&amp;family=Rajdhani:wght@500;700&amp;display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         :root {
-            --bg-color: #050508;
-            --card-bg: #0d0f14;
-            --primary: #00f3ff;
-            --primary-glow: rgba(0, 243, 255, 0.4);
-            --accent: #9d00ff;
-            --text-main: #ffffff;
-            --text-muted: #8f9cae;
-            --font-display: 'Orbitron', sans-serif;
-            --font-body: 'Rajdhani', sans-serif;
-        }
-
+    --bg-color: #0a0505;
+    --card-bg: #140a0a;
+    --primary: #ff2d5f;
+    --primary-glow: rgba(255, 45, 95, 0.4);
+    --accent: #ffffff;
+    --text-main: #ffffff;
+    --text-muted: #c9a3a3;
+    --font-display: 'Orbitron', sans-serif;
+    --font-body: 'Rajdhani', sans-serif;
+}
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             scroll-behavior: smooth;
         }
-
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
@@ -40,7 +38,6 @@
                 linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
             background-size: 30px 30px;
         }
-
         /* Navigation Bar */
         nav {
             position: fixed;
@@ -56,7 +53,6 @@
             border-bottom: 1px solid rgba(0, 243, 255, 0.1);
             z-index: 1000;
         }
-
         .logo {
             font-family: var(--font-display);
             font-weight: 900;
@@ -65,18 +61,15 @@
             text-decoration: none;
             letter-spacing: 2px;
         }
-
         .logo span {
             color: var(--primary);
             text-shadow: 0 0 10px var(--primary-glow);
         }
-
         .nav-links {
             display: flex;
             list-style: none;
             gap: 2.5rem;
         }
-
         .nav-links a {
             color: var(--text-muted);
             text-decoration: none;
@@ -87,12 +80,10 @@
             letter-spacing: 1px;
             transition: all 0.3s ease;
         }
-
         .nav-links a:hover, .nav-links a.active {
             color: var(--primary);
             text-shadow: 0 0 8px var(--primary-glow);
         }
-
         /* Hero Section */
         header {
             min-height: 100vh;
@@ -104,7 +95,6 @@
             padding: 0 1rem;
             position: relative;
         }
-
         .hero-badge {
             font-family: var(--font-display);
             background: rgba(0, 243, 255, 0.1);
@@ -119,7 +109,6 @@
             box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
             animation: pulse 2s infinite;
         }
-
         h1 {
             font-family: var(--font-display);
             font-size: 5rem;
@@ -129,38 +118,31 @@
             line-height: 1.1;
             margin-bottom: 1rem;
         }
-
         h1 .badge-num {
             color: transparent;
             -webkit-text-stroke: 1.5px var(--primary);
             filter: drop-shadow(0 0 10px var(--primary-glow));
         }
-
         /* ARCNICK dynamic scramble/decode effect */
         #scramble-word {
             display: inline-block;
         }
-
         #scramble-word .scramble-char {
             color: var(--primary);
             opacity: 0.85;
             text-shadow: 0 0 8px var(--primary-glow);
         }
-
         #scramble-word .arc-letters {
             color: var(--text-main);
         }
-
         #scramble-word .nick-letters {
             color: var(--text-main);
             transition: color 1.4s ease, text-shadow 1.4s ease;
         }
-
         #scramble-word .nick-letters.cyan-active {
             color: var(--primary);
             text-shadow: 0 0 12px var(--primary-glow), 0 0 26px var(--primary-glow);
         }
-
         .motto {
             font-family: var(--font-display);
             font-size: 1.8rem;
@@ -169,12 +151,10 @@
             text-transform: uppercase;
             margin-bottom: 3rem;
         }
-
         .motto span {
             color: var(--primary);
             font-weight: 700;
         }
-
         .btn {
             display: inline-block;
             font-family: var(--font-display);
@@ -187,13 +167,11 @@
             transition: all 0.3s ease;
             cursor: pointer;
         }
-
         .btn-primary {
             background: var(--primary);
             color: var(--bg-color);
             box-shadow: 0 0 20px var(--primary-glow);
         }
-
         .btn-primary:hover {
             background: transparent;
             color: var(--primary);
@@ -201,14 +179,12 @@
             box-shadow: 0 0 30px var(--primary-glow);
             transform: translateY(-3px);
         }
-
         /* Sections Grid Layout */
         section {
             padding: 8rem 10% 4rem 10%;
             max-width: 1400px;
             margin: 0 auto;
         }
-
         .section-title {
             font-family: var(--font-display);
             font-size: 2.5rem;
@@ -218,7 +194,6 @@
             position: relative;
             display: inline-block;
         }
-
         .section-title::after {
             content: '';
             position: absolute;
@@ -229,14 +204,12 @@
             background: var(--primary);
             box-shadow: 0 0 10px var(--primary-glow);
         }
-
         /* Cards and Layout Components */
         .grid-3 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-
         .card {
             background: var(--card-bg);
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -246,7 +219,6 @@
             overflow: hidden;
             transition: all 0.3s ease;
         }
-
         .card::before {
             content: '';
             position: absolute;
@@ -258,36 +230,30 @@
             box-shadow: 0 0 10px var(--primary-glow);
             transition: all 0.3s ease;
         }
-
         .card:hover {
             transform: translateY(-5px);
             border-color: rgba(0, 243, 255, 0.2);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
-
         .card:hover::before {
             height: 100%;
         }
-
         .card i {
             font-size: 2.5rem;
             color: var(--primary);
             margin-bottom: 1.5rem;
             text-shadow: 0 0 10px var(--primary-glow);
         }
-
         .card h3 {
             font-family: var(--font-display);
             font-size: 1.5rem;
             margin-bottom: 1rem;
             text-transform: uppercase;
         }
-
         .card p {
             color: var(--text-muted);
             line-height: 1.6;
         }
-
         /* Showroom (Robot Highlights) */
         .showroom-container {
             display: grid;
@@ -295,7 +261,6 @@
             gap: 4rem;
             align-items: center;
         }
-
         .robot-visual {
             background: linear-gradient(135deg, rgba(13, 15, 20, 0.8), rgba(5, 5, 8, 0.9));
             border: 2px dashed rgba(0, 243, 255, 0.3);
@@ -308,14 +273,12 @@
             color: var(--text-muted);
             position: relative;
         }
-
         .robot-visual i {
             font-size: 4rem;
             color: var(--primary);
             margin-bottom: 1rem;
             animation: float 4s ease-in-out infinite;
         }
-
         /* Contact & Sponsorship Form */
         .contact-container {
             max-width: 700px;
@@ -326,11 +289,9 @@
             border-radius: 8px;
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
         }
-
         .form-group {
             margin-bottom: 1.5rem;
         }
-
         .form-group label {
             display: block;
             font-family: var(--font-display);
@@ -340,7 +301,6 @@
             margin-bottom: 0.5rem;
             color: var(--text-muted);
         }
-
         .form-group input, .form-group textarea {
             width: 100%;
             background: rgba(5, 5, 8, 0.7);
@@ -352,13 +312,45 @@
             border-radius: 4px;
             transition: all 0.3s ease;
         }
-
         .form-group input:focus, .form-group textarea:focus {
             outline: none;
             border-color: var(--primary);
             box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
         }
-
+        /* Updates: YouTube + Events */
+        .event-row {
+            background: var(--card-bg);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 4px;
+            padding: 1rem 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+        .event-row span {
+            color: var(--text-main);
+        }
+        .event-remove-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: color 0.2s ease;
+        }
+        .event-remove-btn:hover {
+            color: var(--primary);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--bg-color);
+        }
         /* Footer pixel bar styling */
         footer {
             background: #090b0e;
@@ -370,20 +362,17 @@
             color: var(--text-muted);
             letter-spacing: 1px;
         }
-
         /* Animations */
         @keyframes pulse {
             0% { box-shadow: 0 0 15px rgba(0, 243, 255, 0.2); }
             50% { box-shadow: 0 0 25px rgba(0, 243, 255, 0.5); }
             100% { box-shadow: 0 0 15px rgba(0, 243, 255, 0.2); }
         }
-
         @keyframes float {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-15px); }
             100% { transform: translateY(0px); }
         }
-
         /* Responsive Settings */
         @media (max-width: 900px) {
             h1 { font-size: 3.5rem; }
@@ -392,9 +381,53 @@
             section { padding: 6rem 5% 2rem 5%; }
         }
     </style>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FTC Team 35849 | ARCNICK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--bg-color:#0a0505;--card-bg:#140a0a;--primary:#ff2d5f;--primary-glow:rgba(255,45,95,.4);--text-main:#fff;--text-muted:#c9a3a3;--font-display:'Orbitron',sans-serif;--font-body:'Rajdhani',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}body{background-color:var(--bg-color);color:var(--text-main);font-family:var(--font-body);font-size:1.2rem;overflow-x:hidden;background-image:linear-gradient(rgba(255,45,95,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,45,95,.03) 1px,transparent 1px);background-size:30px 30px}nav{position:fixed;top:0;left:0;width:100%;padding:1.5rem 10%;display:flex;justify-content:space-between;align-items:center;background:rgba(5,5,8,.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,45,95,.15);z-index:1000}.logo{font:900 1.8rem var(--font-display);color:var(--text-main);text-decoration:none;letter-spacing:2px}.logo span,.motto span{color:var(--primary)}.nav-links{display:flex;list-style:none;gap:2.5rem}.nav-links a{color:var(--text-muted);text-decoration:none;font:700 1rem var(--font-display);text-transform:uppercase;letter-spacing:1px}.nav-links a:hover,.nav-links a.active{color:var(--primary);text-shadow:0 0 8px var(--primary-glow)}header{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 1rem}.hero-badge{font: .9rem var(--font-display);background:rgba(255,45,95,.1);border:1px solid var(--primary);color:var(--primary);padding:.4rem 1.2rem;border-radius:4px;text-transform:uppercase;letter-spacing:3px;margin-bottom:1.5rem;animation:pulse 2s infinite}h1{font:900 5rem/1.1 var(--font-display);text-transform:uppercase;letter-spacing:4px;margin-bottom:1rem}h1 .badge-num{color:transparent;-webkit-text-stroke:1.5px var(--primary);filter:drop-shadow(0 0 10px var(--primary-glow))}.motto{font:1.8rem var(--font-display);color:var(--text-muted);letter-spacing:6px;text-transform:uppercase;margin-bottom:3rem}.btn{display:inline-block;font:700 1rem var(--font-display);text-transform:uppercase;text-decoration:none;letter-spacing:2px;padding:1rem 2.5rem;border-radius:4px;transition:.3s;cursor:pointer}.btn-primary{background:var(--primary);color:var(--bg-color);box-shadow:0 0 20px var(--primary-glow)}.btn-primary:hover{background:transparent;color:var(--primary);border:1px solid var(--primary);transform:translateY(-3px)}section{padding:8rem 10% 4rem;max-width:1400px;margin:auto}.section-title{font:2.5rem var(--font-display);text-transform:uppercase;letter-spacing:2px;margin-bottom:3rem}.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem}.card,.contact-container,.history-card{background:var(--card-bg);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:2.5rem}.card i{font-size:2.5rem;color:var(--primary);margin-bottom:1.5rem}.card h3{font:1.5rem var(--font-display);margin-bottom:1rem}.card p,.history-blurb{color:var(--text-muted);line-height:1.6}.showroom-container{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}.robot-visual{height:400px;border:2px dashed rgba(255,45,95,.3);border-radius:8px;display:flex;flex-direction:column;justify-content:center;align-items:center;color:var(--text-muted)}.robot-visual i{font-size:4rem;color:var(--primary);margin-bottom:1rem}.history-timeline{display:flex;flex-direction:column;gap:2rem}.history-card{display:flex;flex-wrap:wrap;gap:30px;align-items:center}.history-photos{display:flex;gap:10px;flex:1 1 320px;flex-wrap:wrap}.history-photos img{width:100%;max-width:280px;border-radius:6px;border:2px solid var(--primary)}.history-text{flex:1 1 320px}.history-season{font:.9rem var(--font-display);color:var(--primary);letter-spacing:2px}.history-title{font:1.8rem var(--font-display);margin:8px 0 12px}.contact-container{max-width:700px;margin:auto}.form-group{margin-bottom:1.5rem}.form-group label{display:block;font:.9rem var(--font-display);text-transform:uppercase;color:var(--text-muted);margin-bottom:.5rem}.form-group input,.form-group textarea{width:100%;background:rgba(5,5,8,.7);border:1px solid rgba(255,255,255,.1);padding:1rem;color:var(--text-main);font:1.2rem var(--font-body);border-radius:4px}footer{background:#090b0e;padding:3rem 10%;border-top:4px solid var(--primary);text-align:center;font:.9rem var(--font-display);color:var(--text-muted)}
+/* Fixed launch control */
+#rocket-launch{position:fixed;right:1.5rem;bottom:1.5rem;width:3.75rem;height:3.75rem;border:1px solid var(--primary);border-radius:50%;background:rgba(20,10,10,.92);color:var(--primary);box-shadow:0 0 18px var(--primary-glow),inset 0 0 12px rgba(255,45,95,.15);display:grid;place-items:center;font-size:1.45rem;cursor:pointer;z-index:1100;transition:transform .25s,background .25s,color .25s}.rocket-label{position:absolute;right:calc(100% + .75rem);white-space:nowrap;font:700 .7rem var(--font-display);letter-spacing:1px;opacity:0;transform:translateX(.5rem);transition:.25s;color:var(--primary);pointer-events:none}.rocket-launch:hover .rocket-label,.rocket-launch:focus-visible .rocket-label{opacity:1;transform:none}.rocket-launch:hover{background:var(--primary);color:var(--bg-color);transform:translateY(-3px);box-shadow:0 0 28px var(--primary-glow)}#rocket-launch.blasting{animation:blast-off 1.2s cubic-bezier(.2,.8,.3,1) forwards}.rocket-flame{position:absolute;top:calc(100% - .3rem);left:50%;width:.7rem;height:1.4rem;transform:translateX(-50%);background:linear-gradient(#fff,#ffb000,#ff2d5f,transparent);clip-path:polygon(25% 0,75% 0,100% 45%,50% 100%,0 45%);opacity:0}.rocket-launch.blasting .rocket-flame{opacity:1;animation:flame .12s infinite alternate}.rocket-launch:focus-visible{outline:2px solid var(--text-main);outline-offset:4px}@keyframes blast-off{0%{transform:translateY(0);opacity:1}70%{transform:translateY(-55vh) scale(.8);opacity:1}100%{transform:translateY(-75vh) scale(.5);opacity:0}}@keyframes flame{to{height:2rem;filter:brightness(1.5)}}@keyframes pulse{50%{box-shadow:0 0 25px var(--primary-glow)}}
+@media(max-width:900px){h1{font-size:3.5rem}.nav-links{display:none}.showroom-container{grid-template-columns:1fr}section{padding:6rem 5% 2rem}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+/* Rocket button: page-wide scramble + rocket fly-up */
+#rocket-launch{right:auto;left:1.5rem;opacity:0;visibility:hidden}#rocket-launch .rocket-label{right:auto;left:calc(100% + .75rem);transform:translateX(-.5rem)}#rocket-launch.show{opacity:1;visibility:visible}
+.rocket-flyer{position:fixed;left:50%;bottom:-6rem;z-index:1200;font-size:4rem;color:var(--primary);filter:drop-shadow(0 0 18px var(--primary-glow));pointer-events:none;animation:rocket-fly 1.6s cubic-bezier(.45,0,.2,1) forwards}
+.rocket-flyer i{display:block;transform:rotate(-45deg)}
+.rocket-flyer .rocket-flame{opacity:1;width:1.4rem;height:3rem;animation:flame .1s infinite alternate}
+@keyframes rocket-fly{0%{transform:translate(-50%,0)}100%{transform:translate(-50%,calc(-100vh - 12rem))}}
+.page-scramble-char{color:var(--primary);opacity:.85;text-shadow:0 0 8px var(--primary-glow)}
+/* ===== Sponsor logos beside the Join the Mission card ===== */
+.sponsor-layout{display:grid;grid-template-columns:1fr minmax(0,720px) 1fr;gap:32px;align-items:center;max-width:1400px;margin:0 auto}
+.sponsor-layout .contact-container{margin:0;width:100%;max-width:none}
+.sponsor-col{display:flex;flex-direction:column;gap:16px}
+.sponsor-col:first-child{align-items:flex-end}
+.sponsor-col:last-child{align-items:flex-start}
+.sponsor-tile{width:100%;max-width:200px;aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;padding:10px;transition:transform .2s,box-shadow .2s}
+.sponsor-tile:hover{transform:translateY(-3px);box-shadow:0 6px 20px var(--primary-glow)}
+.sponsor-tile img{max-width:100%;max-height:100%;object-fit:contain}
+.bg-dark{background:#0a0a0a}
+.bg-black{background:#000}
+.bg-white{background:#fff}
+.bg-orange{background:#ee8b34}
+.bg-blue{background:#2f5593}
+.sponsor-tile img.crop-bottom{width:100%;height:100%;object-fit:cover;object-position:center 85%}
+@media(max-width:1000px){
+  .sponsor-layout{grid-template-columns:1fr}
+  .sponsor-layout>.contact-container{order:-1}
+  .sponsor-col{flex-direction:row;flex-wrap:wrap;justify-content:center;align-items:center}
+  .sponsor-tile{width:140px}
+}
+</style>
 </head>
 <body>
-
     <!-- Navigation Header -->
     <nav>
         <a href="#" class="logo">ARCNICK <span>35849</span></a>
@@ -402,10 +435,11 @@
             <li><a href="#home" class="">Home</a></li>
             <li><a href="#about" class="">About</a></li>
             <li><a href="#robot" class="active">The Machine</a></li>
-            <li><a href="#sponsor" class="">Sponsor Us</a></li>
+            <li><a href="#history" class="">History</a></li>
+            <li><a href="#updates" class="">Updates</a></li>
+            <li><a href="#sponsor" class="">Sponsors</a></li>
         </ul>
     </nav>
-
     <!-- Hero Showcase Section -->
     <header id="home">
         <div class="hero-badge">FIRST Tech Challenge Team</div>
@@ -413,29 +447,15 @@
         <p class="motto"><span>NO LIMITS.</span></p>
         <a href="#about" class="btn btn-primary">Explore Our Mission</a>
     </header>
-
     <!-- About Section -->
     <section id="about">
         <h2 class="section-title">Who We Are</h2>
         <div class="grid-3">
             <div class="card">
-                <i class="fa-solid fa-microchip"></i>
-                <h3>Engineering Excellence</h3>
-                <p>We push structural optimization boundaries with rapid custom CAD modeling, precision mechanisms, and rigorous automated sensor integration profiles.</p>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-code"></i>
-                <h3>Autonomous Strategy</h3>
-                <p>Powered by advanced computer vision pipeline paths, odometry localization matrices, and smart real-time driver control-assist macros.</p>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-users"></i>
-                <h3>Community Impact</h3>
-                <p>Spreading passion for STEM across local school circuits, mentoring future robotics generations, and demonstrating engineering accessibility.</p>
+                <p>Our journey began in FLL with Alienators, where we took our first steps into the world of robotics. We then became Potato Heads, growing through new challenges, competitions, and experiences along the way. Today, we’re starting a new chapter as Arcnick in FTC. Looking back at these moments, we’re proud of how far we’ve come, from little dreamers learning the ropes to a team that believes in what we can accomplish together. We’ve learned that when we trust each other, collaborate, and believe in ourselves, there are no limits to what we can achieve.</p>
             </div>
         </div>
     </section>
-
     <!-- Robot Showroom Grid -->
     <section id="robot">
         <h2 class="section-title">The Machine</h2>
@@ -457,34 +477,121 @@
             </div>
         </div>
     </section>
-
+    <!-- Team History Section -->
+<section id="history">
+    <style>
+        #history { padding: 80px 40px; }
+        .history-timeline { display: flex; flex-direction: column; gap: 40px; margin-top: 40px; max-width: 1100px; margin-left: auto; margin-right: auto; }
+        .history-card { display: flex; flex-wrap: wrap; gap: 30px; background: var(--card-bg); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 30px; align-items: center; }
+        .history-photos { display: flex; gap: 10px; flex: 1 1 320px; flex-wrap: wrap; }
+        .history-photos img { width: 100%; max-width: 280px; border-radius: 6px; border: 2px solid var(--primary); object-fit: cover; }
+        .history-text { flex: 1 1 320px; }
+        .history-season { font-family: var(--font-display); color: var(--primary); font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; }
+        .history-title { font-family: var(--font-display); color: var(--text-main); font-size: 1.8rem; margin: 8px 0 12px; }
+        .history-blurb { font-family: var(--font-body); color: var(--text-muted); font-size: 1.1rem; line-height: 1.5; }
+    </style>
+    <h2 class="section-title">Team History</h2>
+    <div class="history-timeline">
+        <div class="history-card">
+            <div class="history-photos">
+                <img src="2022-2023_Alienators.png" alt="2022-2023 season, The Alienators">
+                <img src="2022-2023_Alienators_.png" alt="2022-2023 season, The Alienators">
+            </div>
+            <div class="history-text">
+                <div class="history-season">2022 &ndash; 2023</div>
+                <h3 class="history-title">The Alienators</h3>
+                <p class="history-blurb">Our very first season as a team, competing as "The Alienators." Edit this text to share what you built and learned this year.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <div class="history-photos">
+                <img src="2023-2024_Potato_Heads.png" alt="2023-2024 season, Potato Heads at convention">
+                <img src="2023-2024_Potato_Heads_.png" alt="2023-2024 season, Potato Heads on stage">
+            </div>
+            <div class="history-text">
+                <div class="history-season">2023 &ndash; 2024</div>
+                <h3 class="history-title">Potato Heads #65150</h3>
+                <p class="history-blurb">We rebranded as the "Potato Heads" &mdash; tiny taters, mighty dreams! Edit this text with your season's highlights and awards.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <div class="history-photos">
+                <img src="2024-2025_Potato_Heads.png" alt="2024-2025 season, Potato Heads team photo">
+            </div>
+            <div class="history-text">
+                <div class="history-season">2024 &ndash; 2025</div>
+                <h3 class="history-title">Potato Heads #65150</h3>
+                <p class="history-blurb">Another season as the Potato Heads before evolving into ARCNICK 35849. Edit this text with what made this year special.</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Updates: YouTube + Events -->
+    <section id="updates">
+        <h2 class="section-title">Updates</h2>
+        <div class="showroom-container">
+            <div>
+                <p style="color: var(--primary); font-family: var(--font-display); letter-spacing: 2px; margin-bottom: 0.5rem; text-transform: uppercase;">Watch Us</p>
+                <h3 style="font-family: var(--font-display); font-size: 2.2rem; text-transform: uppercase; margin-bottom: 1.5rem;">YouTube Channel</h3>
+                <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;">Match footage, build updates, and behind-the-scenes content in the workshop.</p>
+                <a href="https://www.youtube.com/@ArcnickFTC" target="_blank" rel="noopener" class="btn btn-primary"><i class="fa-brands fa-youtube" style="margin-right: 8px;"></i>Visit Our Channel</a>
+            </div>
+            <div>
+                <p style="color: var(--primary); font-family: var(--font-display); letter-spacing: 2px; margin-bottom: 0.5rem; text-transform: uppercase;">What's Next</p>
+                <h3 style="font-family: var(--font-display); font-size: 2.2rem; text-transform: uppercase; margin-bottom: 1.5rem;">Upcoming Events</h3>
+                <div id="events-list" style="display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1.5rem;"></div>
+            </div>
+        </div>
+    </section>
     <!-- Sponsor Contact Section -->
     <section id="sponsor">
         <h2 class="section-title">Join The Mission</h2>
-        <div class="contact-container">
-            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message simulation successful! Your server framework will process this action.');">
-                <div class="form-group">
-                    <label for="name">Name / Company</label>
-                    <input type="text" id="name" required="" placeholder="Enter name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" required="" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                    <label for="message">Sponsorship or Joining Inquiry</label>
-                    <textarea id="message" rows="5" required="" placeholder="How would you like to partner with ARCNICK 35849?"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%; border: none;">Submit Message</button>
+        <div class="sponsor-layout">
+    <div class="sponsor-col">
+        <div class="sponsor-tile bg-black"><img src="nvidia.png" alt="NVIDIA"></div>
+        <div class="sponsor-tile bg-orange"><img src="timken.png" alt="Timken"></div>
+        <div class="sponsor-tile bg-white"><img src="bosch.png" alt="Bosch"></div>
+        <div class="sponsor-tile bg-blue"><img src="srp.png" alt="SRP" class="crop-bottom"></div>
+    </div>
+            <div class="contact-container">
+<form id="join-mission-form" action="https://formsubmit.co/arcnickftc@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="New Join The Mission message">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://arcnickftc.github.io/thanks.html">
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+    <div class="form-group">
+        <label for="name">Name / Company</label>
+        <input type="text" id="name" name="name" required="" placeholder="Enter name">
+    </div>
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required="" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+        <label for="message">Sponsorship or Joining Inquiry</label>
+        <textarea id="message" name="message" rows="5" required="" placeholder="How would you like to partner with ARCNICK 35849?"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" style="width: 100%; border: none;">Submit Message</button>
             </form>
         </div>
+                <div class="sponsor-col">
+        <div class="sponsor-tile bg-white"><img src="solidworks.png" alt="SolidWorks"></div>
+        <div class="sponsor-tile bg-white"><img src="jabil.png" alt="Jabil"></div>
+        <div class="sponsor-tile bg-black"><img src="kj-elite-realty.png" alt="KJ Elite Realty"></div>
+        <div class="sponsor-tile bg-dark"><img src="mekong-palace.png" alt="Mekong Palace"></div>
+    </div>
+</div>
     </section>
-
     <!-- Pixel Footbar -->
     <footer>
-        <p>© 2026 FTC TEAM 35849 ARCNICK. NO LIMITS.</p>
     </footer>
-
+    <!-- Back-to-top rocket: scrambles the text and launches a rocket -->
+    <button type="button" id="rocket-launch" class="rocket-launch" aria-label="Back to top">
+        <span class="rocket-label">BACK TO TOP</span>
+        <i class="fa-solid fa-rocket"></i>
+        <span class="rocket-flame"></span>
+    </button>
     <!-- ARCNICK Scramble/Decode Intro Effect -->
     <script>
         class TextScramble {
@@ -540,7 +647,6 @@
                 return this.chars[Math.floor(Math.random() * this.chars.length)];
             }
         }
-
         window.addEventListener('DOMContentLoaded', () => {
             const el = document.getElementById('scramble-word');
             const fx = new TextScramble(el);
@@ -553,21 +659,19 @@
             });
         });
     </script>
-
     <!-- Interactive Navigation Handler Logic -->
     <script>
         window.addEventListener('scroll', () => {
             let current = '';
             const sections = document.querySelectorAll('section, header');
             const navLinks = document.querySelectorAll('.nav-links a');
-            
+
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 if (pageYOffset >= sectionTop - 150) {
                     current = section.getAttribute('id');
                 }
             });
-
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href').includes(current)) {
@@ -576,5 +680,131 @@
             });
         });
     </script>
+    <!-- Events Board: edit events.json in the GitHub repo to change this list -->
+    <script>
+        (async function () {
+            const eventsList = document.getElementById('events-list');
+            let events = [];
+            try {
+                const res = await fetch('events.json', { cache: 'no-cache' });
+                if (res.ok) events = await res.json();
+            } catch (e) {}
+            if (events.length === 0) {
+                eventsList.innerHTML = '<p style="color: var(--text-muted);">No events posted yet.</p>';
+                return;
+            }
+            events.forEach((ev) => {
+                const row = document.createElement('div');
+                row.className = 'event-row';
+                const span = document.createElement('span');
+                span.textContent = ev;
+                row.appendChild(span);
+                eventsList.appendChild(row);
+            });
+        })();
+    </script>
+    <!-- Rocket button logic -->
+    <script>
+        (function () {
+            const btn = document.getElementById('rocket-launch');
+            const chars = '!<>-_\\/[]{}—=+*^?#01ARCNICK$%&';
+            const esc = (c) => c === '<' ? '&lt;' : c === '>' ? '&gt;' : c === '&' ? '&amp;' : c;
+            const randomChar = () => chars[Math.floor(Math.random() * chars.length)];
+            let running = false;
 
+            function textNodes() {
+                const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+                    acceptNode(node) {
+                        if (!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+                        if (node.parentElement.closest('script, style, noscript, textarea, #rocket-launch')) return NodeFilter.FILTER_REJECT;
+                        return NodeFilter.FILTER_ACCEPT;
+                    },
+                });
+                // Only text on screen now or at the top of the page; the rest can't be seen and would slow the animation.
+                const nodes = [];
+                const range = document.createRange();
+                while (walker.nextNode()) {
+                    range.selectNodeContents(walker.currentNode);
+                    const r = range.getBoundingClientRect();
+                    const onScreen = r.bottom > 0 && r.top < innerHeight;
+                    const atTop = r.top + scrollY < innerHeight;
+                    if (r.width && (onScreen || atTop)) nodes.push(walker.currentNode);
+                }
+                return nodes;
+            }
+
+            function launchRocket() {
+                const rocket = document.createElement('div');
+                rocket.className = 'rocket-flyer';
+                rocket.innerHTML = '<i class="fa-solid fa-rocket"></i><span class="rocket-flame"></span>';
+                document.body.appendChild(rocket);
+                rocket.addEventListener('animationend', () => rocket.remove());
+            }
+
+            function scramblePage() {
+                // Wrap each text node so it can be swapped for scrambled characters, then restored.
+                const items = textNodes().map((node) => {
+                    const wrap = document.createElement('span');
+                    node.replaceWith(wrap);
+                    const text = node.nodeValue;
+                    const queue = [...text].map((ch) => ({
+                        ch,
+                        start: Math.floor(Math.random() * 20),
+                        end: 55 + Math.floor(Math.random() * 45),
+                        char: '',
+                    }));
+                    return { node, wrap, queue, last: '' };
+                });
+                const total = 105;
+                const t0 = performance.now();
+                let frame = 0;
+                document.body.classList.add('page-scrambling');
+                return new Promise((resolve) => {
+                    function update() {
+                        for (const item of items) {
+                            const { wrap, queue } = item;
+                            let out = '';
+                            for (const q of queue) {
+                                if (/\s/.test(q.ch) || frame < q.start || frame >= q.end) {
+                                    out += esc(q.ch);
+                                } else {
+                                    if (!q.char || Math.random() < 0.3) q.char = randomChar();
+                                    out += `<span class="page-scramble-char">${esc(q.char)}</span>`;
+                                }
+                            }
+                            if (out !== item.last) wrap.innerHTML = item.last = out;
+                        }
+                        frame = (performance.now() - t0) / (1000 / 60);
+                        if (frame < total) {
+                            requestAnimationFrame(update);
+                        } else {
+                            for (const { node, wrap } of items) wrap.replaceWith(node);
+                            document.body.classList.remove('page-scrambling');
+                            resolve();
+                        }
+                    }
+                    update();
+                });
+            }
+
+            const toggleBtn = () => btn.classList.toggle('show', scrollY > 400 || running);
+            window.addEventListener('scroll', toggleBtn, { passive: true });
+            toggleBtn();
+
+            btn.addEventListener('click', async () => {
+                if (running) return;
+                running = true;
+                btn.classList.add('blasting');
+                launchRocket();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                await scramblePage();
+                btn.classList.remove('blasting');
+                running = false;
+                toggleBtn();
+            });
+        })();
+    </script>
 </body></html>
+</script>
+</body>
+</html>
